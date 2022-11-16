@@ -1,0 +1,29 @@
+@import "mixin";
+@import "fonts";
+@import "buttons";
+
+.lookbook_page{
+  padding: 0 25px;
+  max-width: calc(100% - 100px);
+  margin: 0 auto;
+}
+.lookbook_page__header{
+  margin-bottom: 60px;
+}
+.lookbook_page__title{
+  text-align: center;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+.lookbook_page__subtitle{
+  text-align: center;
+}
+
+
+@import "componets/lookbook-block";
+@import "componets/other-collection";
+
+
+
+

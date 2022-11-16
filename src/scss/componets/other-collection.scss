@@ -1,0 +1,79 @@
+.other-collection {
+  font-family: 'GT Eesti Pro';
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-family: 'GT Eesti Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #262626;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 16px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 0 calc(20%  - 16px);
+    max-width: calc(20%  - 16px);
+  }
+  &__figure{
+    margin: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+    img{
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content{
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+  }
+  &__name{
+    font-family: 'GT Eesti Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  @include r(1023){
+    &__body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    &__item {
+      flex: 1 0 calc(33.333%  - 8px);
+      max-width: calc(33.333%  - 8px);
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+
+  @include r(767){
+    &__item {
+      position: relative;
+      flex: 1 0 242px;
+      max-width: 242px;
+    }
+  }
+}
