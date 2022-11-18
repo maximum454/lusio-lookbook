@@ -2,14 +2,17 @@
   font-family: 'GT Eesti Pro';
 
   &__body{
+    overflow: hidden;
+    align-items: center;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #D1D1D3;
     &--variant-1{
       display: grid;
       grid-template-columns: 41.71641% 22.76119% 33.13432%;//559px 305px 444px
       grid-template-areas: 'img1 img2'
                             'content img3';
       grid-gap: 16px;
-      align-items: center;
-      overflow: hidden;
       .img1{
         grid-area: img1;
         grid-column-start: 1;
@@ -27,11 +30,41 @@
         grid-column-end: 4;
       }
     }
+    &--variant-2{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .text{
+        flex: 1 0 100%;
+        margin-bottom: 60px;
+      }
+      .img1{
+        flex: 1 0 100%;
+      }
+      .img2{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img3{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img4{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img5{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+    }
   }
   &__content{
     grid-area: content;
     text-align: center;
     width: 100%;
+    max-width: 924px;
+    margin: 0 auto;
     font-family: $font1;
   }
   &__img{
@@ -75,6 +108,8 @@
 
   @include r(1023){
     &__body{
+      padding-bottom: 40px;
+      margin-bottom: 40px;
       &--variant-1{
         grid-template-columns: 46.5% 18% 33.33%;//16.9270% 31.51041%
         grid-template-areas: 'img1 img2'
@@ -96,6 +131,27 @@
           grid-area: img3;
           grid-column-start: 2;
           grid-column-end: 4;
+        }
+      }
+      &--variant-2{
+        gap: 8px;
+        .text{
+          margin-bottom: 40px;
+        }
+        .img1{
+          flex: 1 0 100%;
+        }
+        .img2{
+          flex: 1 0 calc(25% - 8px);
+        }
+        .img3{
+          flex: 1 0 calc(25% - 8px);
+        }
+        .img4{
+          flex: 1 0 calc(25% - 8px);
+        }
+        .img5{
+          flex: 1 0 calc(25% - 8px);
         }
       }
     }
@@ -137,6 +193,31 @@
           grid-area: img3;
           grid-column-start: auto;
           grid-column-end: auto;
+        }
+      }
+      &--variant-2{
+        gap: 8px;
+        .text{
+          margin-bottom: 40px;
+        }
+        .img1{
+          flex: 1 0 100%;
+        }
+        .img2{
+          flex: 1 0 calc(50% - 8px);
+          max-width: 50%;
+        }
+        .img3{
+          flex: 1 0 calc(50% - 8px);
+          max-width: 50%;
+        }
+        .img4{
+          flex: 1 0 calc(50% - 8px);
+          max-width: 50%;
+        }
+        .img5{
+          flex: 1 0 calc(50% - 8px);
+          max-width: 50%;
         }
       }
     }

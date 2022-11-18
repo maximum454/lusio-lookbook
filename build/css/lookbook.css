@@ -332,15 +332,21 @@
   font-family: "GT Eesti Pro";
 }
 
+.lookbook-block__body {
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #D1D1D3;
+}
+
 .lookbook-block__body--variant-1 {
   display: grid;
   grid-template-columns: 41.71641% 22.76119% 33.13432%;
   grid-template-areas: "img1 img2" "content img3";
   grid-gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
 }
 
 .lookbook-block__body--variant-1 .img1 {
@@ -361,10 +367,62 @@
   grid-column-end: 4;
 }
 
+.lookbook-block__body--variant-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+.lookbook-block__body--variant-2 .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  margin-bottom: 60px;
+}
+
+.lookbook-block__body--variant-2 .img1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+.lookbook-block__body--variant-2 .img2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 16px);
+          flex: 1 0 calc(25% - 16px);
+  max-width: 25%;
+}
+
+.lookbook-block__body--variant-2 .img3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 16px);
+          flex: 1 0 calc(25% - 16px);
+  max-width: 25%;
+}
+
+.lookbook-block__body--variant-2 .img4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 16px);
+          flex: 1 0 calc(25% - 16px);
+  max-width: 25%;
+}
+
+.lookbook-block__body--variant-2 .img5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 16px);
+          flex: 1 0 calc(25% - 16px);
+  max-width: 25%;
+}
+
 .lookbook-block__content {
   grid-area: content;
   text-align: center;
   width: 100%;
+  max-width: 924px;
+  margin: 0 auto;
   font-family: "GT Eesti Pro", sans-serif;
 }
 
@@ -442,7 +500,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 calc(20% - 16px);
           flex: 1 0 calc(20% - 16px);
-  max-width: calc(20% - 16px);
+  max-width: 20%;
 }
 
 .other-collection__figure {
@@ -478,6 +536,11 @@
 }
 
 @media only screen and (max-width: 1023px) {
+  .lookbook-block__body {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
   .lookbook-block__body--variant-1 {
     grid-template-columns: 46.5% 18% 33.33%;
     grid-template-areas: "img1 img2" "content img3";
@@ -501,6 +564,44 @@
     grid-area: img3;
     grid-column-start: 2;
     grid-column-end: 4;
+  }
+
+  .lookbook-block__body--variant-2 {
+    gap: 8px;
+  }
+
+  .lookbook-block__body--variant-2 .text {
+    margin-bottom: 40px;
+  }
+
+  .lookbook-block__body--variant-2 .img1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .lookbook-block__body--variant-2 .img2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 8px);
+            flex: 1 0 calc(25% - 8px);
+  }
+
+  .lookbook-block__body--variant-2 .img3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 8px);
+            flex: 1 0 calc(25% - 8px);
+  }
+
+  .lookbook-block__body--variant-2 .img4 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 8px);
+            flex: 1 0 calc(25% - 8px);
+  }
+
+  .lookbook-block__body--variant-2 .img5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 8px);
+            flex: 1 0 calc(25% - 8px);
   }
 
   .lookbook-block__img {
@@ -568,6 +669,48 @@
     grid-area: img3;
     grid-column-start: auto;
     grid-column-end: auto;
+  }
+
+  .lookbook-block__body--variant-2 {
+    gap: 8px;
+  }
+
+  .lookbook-block__body--variant-2 .text {
+    margin-bottom: 40px;
+  }
+
+  .lookbook-block__body--variant-2 .img1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .lookbook-block__body--variant-2 .img2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 8px);
+            flex: 1 0 calc(50% - 8px);
+    max-width: 50%;
+  }
+
+  .lookbook-block__body--variant-2 .img3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 8px);
+            flex: 1 0 calc(50% - 8px);
+    max-width: 50%;
+  }
+
+  .lookbook-block__body--variant-2 .img4 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 8px);
+            flex: 1 0 calc(50% - 8px);
+    max-width: 50%;
+  }
+
+  .lookbook-block__body--variant-2 .img5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(50% - 8px);
+            flex: 1 0 calc(50% - 8px);
+    max-width: 50%;
   }
 
   .lookbook-block__img img {
