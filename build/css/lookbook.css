@@ -417,6 +417,26 @@
   max-width: 25%;
 }
 
+.lookbook-block__body--variant-3 {
+  display: grid;
+  grid-template-columns: 650px 329px 329px;
+  grid-template-areas: "img1 content content" "img1 img2 img3";
+  grid-template-rows: auto 440px;
+  grid-gap: 16px;
+}
+
+.lookbook-block__body--variant-3 .img1 {
+  grid-area: img1;
+}
+
+.lookbook-block__body--variant-3 .img2 {
+  grid-area: img2;
+}
+
+.lookbook-block__body--variant-3 .img3 {
+  grid-area: img3;
+}
+
 .lookbook-block__content {
   grid-area: content;
   text-align: center;
@@ -604,6 +624,29 @@
             flex: 1 0 calc(25% - 8px);
   }
 
+  .lookbook-block__body--variant-3 {
+    grid-template-columns: 344px 184px 184px;
+    grid-template-areas: "img1 content content" "img1 img2 img3";
+    grid-template-rows: auto 200px;
+    grid-gap: 8px;
+  }
+
+  .lookbook-block__body--variant-3 .text {
+    margin: 40px 0;
+  }
+
+  .lookbook-block__body--variant-3 .img1 {
+    grid-area: img1;
+  }
+
+  .lookbook-block__body--variant-3 .img2 {
+    grid-area: img2;
+  }
+
+  .lookbook-block__body--variant-3 .img3 {
+    grid-area: img3;
+  }
+
   .lookbook-block__img {
     height: 100%;
   }
@@ -711,6 +754,12 @@
         -ms-flex: 1 0 calc(50% - 8px);
             flex: 1 0 calc(50% - 8px);
     max-width: 50%;
+  }
+
+  .lookbook-block__body--variant-3 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img1" "content" "img2" "img3";
+    grid-template-rows: auto;
   }
 
   .lookbook-block__img img {
