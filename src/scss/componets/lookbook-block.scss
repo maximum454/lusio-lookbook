@@ -40,6 +40,7 @@
       }
       .img1{
         flex: 1 0 100%;
+        width: 100%;
       }
       .img2{
         flex: 1 0 calc(25% - 16px);
@@ -87,11 +88,8 @@
   &__img{
     img{
       display: block;
-      max-width: 100%;
-      height: auto;
       object-fit: cover;
     }
-
   }
 
   &__title {
