@@ -4,44 +4,48 @@
   &__body{
     &--variant-1{
       display: grid;
-      grid-template-columns: 765px 321px 444px;
+      grid-template-columns: 41.71641% 22.76119% 33.13432%;//559px 305px 444px
       grid-template-areas: 'img1 img2'
                             'content img3';
       grid-gap: 16px;
       align-items: center;
+      overflow: hidden;
+      .img1{
+        grid-area: img1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .img2{
+        grid-area: img2;
+
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      .img3{
+        grid-area: img3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
     }
   }
   &__content{
     grid-area: content;
     text-align: center;
-    width: 535px;
-    margin-right: 24px;
+    width: 100%;
+    font-family: $font1;
   }
   &__img{
     img{
       display: block;
       max-width: 100%;
+      height: auto;
+      object-fit: cover;
     }
-    &.img1{
-      grid-area: img1;
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    &.img2{
-      grid-area: img2;
 
-      grid-column-start: 3;
-      grid-column-end: 4;
-    }
-    &.img3{
-      grid-area: img3;
-      grid-column-start: 2;
-      grid-column-end: 4;
-    }
   }
 
   &__title {
-    font-family: 'GT Eesti Pro';
+    font-family: $font1;
     font-weight: 400;
     font-size: 36px;
     line-height: 40px;
@@ -52,13 +56,94 @@
 
   &__anons {
     p {
-      font-family: 'GT Eesti Pro';
+      font-family: $font1;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
       color: #262626;
       margin: 0 0 16px;
+    }
+  }
+  &__btn{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  @include r(1023){
+    &__body{
+      &--variant-1{
+        grid-template-columns: 46.5% 18% 33.33%;//16.9270% 31.51041%
+        grid-template-areas: 'img1 img2'
+                            'content img3';
+        grid-template-rows: auto 300px;
+        grid-gap: 8px;
+        .img1{
+          grid-area: img1;
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        .img2{
+          grid-area: img2;
+
+          grid-column-start: 3;
+          grid-column-end: 4;
+        }
+        .img3{
+          grid-area: img3;
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+    }
+    &__img{
+      height: 100%;
+      img{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    &__btn{
+      padding: 12px;
+    }
+  }
+  @include r(767){
+    &__body{
+      &--variant-1{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'img1' 'img2' 'content' 'img3';
+        grid-template-rows: auto;
+        grid-gap: 8px;
+        .img1{
+          grid-area: img1;
+          grid-column-start: auto;
+          grid-column-end: auto;
+        }
+        .img2{
+          grid-area: img2;
+
+          grid-column-start: auto;
+          grid-column-end: auto;
+        }
+        .img3{
+          grid-area: img3;
+          grid-column-start: auto;
+          grid-column-end: auto;
+        }
+      }
+    }
+    &__img{
+      img{
+        width: 100%;
+      }
     }
   }
 }

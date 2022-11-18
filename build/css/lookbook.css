@@ -10,27 +10,10 @@
 */
 
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat-Bold"), url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "GT Eesti Pro";
+  src: local("GT Eesti Pro Display Regular"), local("GT-Eesti-Pro-Display-Regular"), url("../fonts/GTEestiProDisplay/GTEestiProDisplay-Regular.woff2") format("woff2"), url("../fonts/GTEestiProDisplay/GTEestiProDisplay-Regular.woff") format("woff"), url("../fonts/GTEestiProDisplay/GTEestiProDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat-Medium"), url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat-Light"), url("../fonts/Montserrat/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
 }
 
 .btn {
@@ -320,16 +303,19 @@
 }
 
 .lookbook_page {
-  padding: 0 25px;
-  max-width: calc(100% - 100px);
+  padding: 0 20px;
+  max-width: 1380px;
   margin: 0 auto;
+  font-family: "GT Eesti Pro", sans-serif;
 }
 
 .lookbook_page__header {
+  text-align: center;
   margin-bottom: 60px;
 }
 
 .lookbook_page__title {
+  font-family: "GT Eesti Pro", sans-serif;
   text-align: center;
   font-weight: 400;
   font-size: 36px;
@@ -337,7 +323,9 @@
 }
 
 .lookbook_page__subtitle {
-  text-align: center;
+  font-family: "GT Eesti Pro", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .lookbook-block {
@@ -346,46 +334,50 @@
 
 .lookbook-block__body--variant-1 {
   display: grid;
-  grid-template-columns: 765px 321px 444px;
+  grid-template-columns: 41.71641% 22.76119% 33.13432%;
   grid-template-areas: "img1 img2" "content img3";
   grid-gap: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
-.lookbook-block__content {
-  grid-area: content;
-  text-align: center;
-  width: 535px;
-  margin-right: 24px;
-}
-
-.lookbook-block__img img {
-  display: block;
-  max-width: 100%;
-}
-
-.lookbook-block__img.img1 {
+.lookbook-block__body--variant-1 .img1 {
   grid-area: img1;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.lookbook-block__img.img2 {
+.lookbook-block__body--variant-1 .img2 {
   grid-area: img2;
   grid-column-start: 3;
   grid-column-end: 4;
 }
 
-.lookbook-block__img.img3 {
+.lookbook-block__body--variant-1 .img3 {
   grid-area: img3;
   grid-column-start: 2;
   grid-column-end: 4;
 }
 
+.lookbook-block__content {
+  grid-area: content;
+  text-align: center;
+  width: 100%;
+  font-family: "GT Eesti Pro", sans-serif;
+}
+
+.lookbook-block__img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .lookbook-block__title {
-  font-family: "GT Eesti Pro";
+  font-family: "GT Eesti Pro", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -395,13 +387,21 @@
 }
 
 .lookbook-block__anons p {
-  font-family: "GT Eesti Pro";
+  font-family: "GT Eesti Pro", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: #262626;
   margin: 0 0 16px;
+}
+
+.lookbook-block__btn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .other-collection {
@@ -478,6 +478,51 @@
 }
 
 @media only screen and (max-width: 1023px) {
+  .lookbook-block__body--variant-1 {
+    grid-template-columns: 46.5% 18% 33.33%;
+    grid-template-areas: "img1 img2" "content img3";
+    grid-template-rows: auto 300px;
+    grid-gap: 8px;
+  }
+
+  .lookbook-block__body--variant-1 .img1 {
+    grid-area: img1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .lookbook-block__body--variant-1 .img2 {
+    grid-area: img2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .lookbook-block__body--variant-1 .img3 {
+    grid-area: img3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .lookbook-block__img {
+    height: 100%;
+  }
+
+  .lookbook-block__img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .lookbook-block__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .lookbook-block__btn {
+    padding: 12px;
+  }
+
   .other-collection__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -500,6 +545,35 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .lookbook-block__body--variant-1 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img1" "img2" "content" "img3";
+    grid-template-rows: auto;
+    grid-gap: 8px;
+  }
+
+  .lookbook-block__body--variant-1 .img1 {
+    grid-area: img1;
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  .lookbook-block__body--variant-1 .img2 {
+    grid-area: img2;
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  .lookbook-block__body--variant-1 .img3 {
+    grid-area: img3;
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+
+  .lookbook-block__img img {
+    width: 100%;
+  }
+
   .other-collection__item {
     position: relative;
     -webkit-box-flex: 1;
