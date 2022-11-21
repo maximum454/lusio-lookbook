@@ -425,7 +425,7 @@
 
 .lookbook-block__body--variant-3 {
   display: grid;
-  grid-template-columns: 650px 329px 329px;
+  grid-template-columns: 48.5074% 1fr 1fr;
   grid-template-areas: "img1 content content" "img1 img2 img3";
   grid-template-rows: auto 440px;
   grid-gap: 16px;
@@ -437,10 +437,20 @@
 
 .lookbook-block__body--variant-3 .img2 {
   grid-area: img2;
+  height: 100%;
+}
+
+.lookbook-block__body--variant-3 .img2 img {
+  height: 100%;
 }
 
 .lookbook-block__body--variant-3 .img3 {
   grid-area: img3;
+  height: 100%;
+}
+
+.lookbook-block__body--variant-3 .img3 img {
+  height: 100%;
 }
 
 .lookbook-block__content {
@@ -629,9 +639,7 @@
   }
 
   .lookbook-block__body--variant-3 {
-    grid-template-columns: 344px 184px 184px;
     grid-template-areas: "img1 content content" "img1 img2 img3";
-    grid-template-rows: auto 200px;
     grid-gap: 8px;
   }
 
