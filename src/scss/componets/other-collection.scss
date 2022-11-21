@@ -1,5 +1,6 @@
 .other-collection {
   font-family: 'GT Eesti Pro';
+
   &__header {
     margin-bottom: 24px;
   }
@@ -14,18 +15,6 @@
     align-items: center;
     letter-spacing: 0.02em;
     color: #262626;
-  }
-
-  &__body {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px 16px;
-  }
-
-  &__item {
-    position: relative;
-    flex: 1 0 calc(20%  - 16px);
-    max-width:20%;
   }
   &__figure{
     margin: 0;
@@ -54,15 +43,26 @@
     text-align: center;
   }
 
+  .swiper-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 16px;
+  }
+  .swiper-slide{
+    position: relative;
+    flex: 1 0 calc(20%  - 16px);
+    max-width:20%;
+  }
+
+
   @include r(1023){
-    &__body {
+    .swiper-wrapper{
       display: flex;
-      flex-wrap: wrap;
       gap: 8px;
     }
-    &__item {
+    .swiper-slide{
       flex: 1 0 calc(33.333%  - 8px);
-      max-width: calc(33.333%  - 8px);
+      max-width: 33.333%;
       &:last-child{
         display: none;
       }
@@ -70,10 +70,17 @@
   }
 
   @include r(767){
-    &__item {
-      position: relative;
-      flex: 1 0 242px;
-      max-width: 242px;
+    margin: 0 -20px 40px 0;
+    .swiper-wrapper{
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+    .swiper-slide{
+      flex: none;
+      max-width: 100%;
+      &:last-child{
+        display: block;
+      }
     }
   }
 }
