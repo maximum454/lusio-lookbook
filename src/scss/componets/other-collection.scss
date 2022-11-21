@@ -1,6 +1,6 @@
 .other-collection {
   font-family: 'GT Eesti Pro';
-
+  margin-bottom: 60px;
   &__header {
     margin-bottom: 24px;
   }
@@ -56,6 +56,7 @@
 
 
   @include r(1023){
+    margin-bottom: 60px;
     .swiper-wrapper{
       display: flex;
       gap: 8px;
