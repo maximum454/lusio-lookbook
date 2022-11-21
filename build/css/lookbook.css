@@ -1588,39 +1588,10 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
-.lookbook-detail__content {
-  grid-area: content;
-  text-align: center;
-  width: 100%;
-  max-width: 924px;
-  margin: 0 auto;
-  font-family: "GT Eesti Pro", sans-serif;
-}
-
 .lookbook-detail__img img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.lookbook-detail__title {
-  font-family: "GT Eesti Pro", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  color: #262626;
-  margin: 0 0 16px;
-}
-
-.lookbook-detail__anons p {
-  font-family: "GT Eesti Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #262626;
-  margin: 0 0 16px;
 }
 
 .lookbook-detail__items {
@@ -1993,6 +1964,124 @@ button.swiper-pagination-bullet {
 
   .lookbook-block__img img {
     width: 100%;
+  }
+
+  .lookbook-detail__body {
+    margin-bottom: 40px;
+  }
+
+  .lookbook-detail__body--variant-1 {
+    gap: 8px;
+  }
+
+  .lookbook-detail__body--variant-1 .lookbook-detail__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .lookbook-detail__body--variant-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .lookbook-detail__body--variant-2 .text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    margin-bottom: 60px;
+  }
+
+  .lookbook-detail__body--variant-2 .img1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    width: 100%;
+  }
+
+  .lookbook-detail__body--variant-2 .img2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 16px);
+            flex: 1 0 calc(25% - 16px);
+    max-width: 25%;
+  }
+
+  .lookbook-detail__body--variant-2 .img3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 16px);
+            flex: 1 0 calc(25% - 16px);
+    max-width: 25%;
+  }
+
+  .lookbook-detail__body--variant-2 .img4 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 16px);
+            flex: 1 0 calc(25% - 16px);
+    max-width: 25%;
+  }
+
+  .lookbook-detail__body--variant-2 .img5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(25% - 16px);
+            flex: 1 0 calc(25% - 16px);
+    max-width: 25%;
+  }
+
+  .lookbook-detail__body--variant-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img1" "img2" "img3" "items";
+    gap: 16px;
+  }
+
+  .lookbook-detail__body--variant-3 .img1 {
+    grid-area: img1;
+  }
+
+  .lookbook-detail__body--variant-3 .img2 {
+    grid-area: img2;
+  }
+
+  .lookbook-detail__body--variant-3 .img3 {
+    grid-area: img3;
+  }
+
+  .lookbook-detail__body--variant-4 {
+    gap: 8px;
+  }
+
+  .lookbook-detail__body--variant-4 .lookbook-detail__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .lookbook-detail__body--variant-5 {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img2" "img3" "img1";
+    gap: 8px;
+  }
+
+  .lookbook-detail__body--variant-5 .img1 {
+    grid-area: img1;
+  }
+
+  .lookbook-detail__body--variant-5 .img2 {
+    grid-area: img2;
+  }
+
+  .lookbook-detail__body--variant-5 .img3 {
+    grid-area: img3;
+  }
+
+  .lookbook-items__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .other-collection {
