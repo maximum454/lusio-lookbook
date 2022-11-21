@@ -1,0 +1,119 @@
+.lookbook-detail {
+  font-family: 'GT Eesti Pro';
+
+  &__body{
+    overflow: hidden;
+    align-items: center;
+    margin-bottom: 40px;
+    &--variant-1{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .lookbook-detail__img{
+        flex: 1 0 calc(50% - 16px);
+        img{
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+    &--variant-2{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .text{
+        flex: 1 0 100%;
+        margin-bottom: 60px;
+      }
+      .img1{
+        flex: 1 0 100%;
+        width: 100%;
+      }
+      .img2{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img3{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img4{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+      .img5{
+        flex: 1 0 calc(25% - 16px);
+        max-width: 25%;
+      }
+    }
+    &--variant-3{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'img1 img2'
+                            'img1 img3'
+                            'items items';
+      gap: 16px;
+      .img1{
+        grid-area: img1;
+        img{
+          width: 100%;
+        }
+      }
+      .img2{
+        grid-area: img2;
+        height: 100%;
+        img{
+          height: 100%;
+        }
+      }
+      .img3{
+        grid-area: img3;
+        height: 100%;
+        img{
+          height: 100%;
+        }
+      }
+    }
+  }
+  &__content{
+    grid-area: content;
+    text-align: center;
+    width: 100%;
+    max-width: 924px;
+    margin: 0 auto;
+    font-family: $font1;
+  }
+  &__img{
+    img{
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-family: $font1;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #262626;
+    margin: 0 0 16px;
+  }
+  &__anons {
+    p {
+      font-family: $font1;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #262626;
+      margin: 0 0 16px;
+    }
+  }
+  &__items{
+    grid-area: items;
+    margin-top: 24px;
+    flex: 1 0 100%;
+  }
+}

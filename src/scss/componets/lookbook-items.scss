@@ -1,0 +1,58 @@
+.lookbook-items {
+  font-family: 'GT Eesti Pro';
+  &__body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  &__item{
+    flex: 1 0 calc(25% - 16px);
+    max-width: 25%;
+  }
+  &__figure{
+    margin: 0;
+    img{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content{
+    grid-area: content;
+    text-align: left;
+    width: 100%;
+    max-width: 924px;
+    margin: 0 auto;
+    font-family: $font1;
+  }
+  &__name {
+    font-family: $font1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #262626;
+    margin: 0 0 4px;
+  }
+  &__price {
+    font-family: $font1;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 4px;
+  }
+  &__color{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  &__color-item{
+    width: 10px;
+    height: 10px;
+    background-color: #89B3C1;
+    overflow: hidden;
+  }
+}
