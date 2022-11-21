@@ -76,6 +76,47 @@
         }
       }
     }
+    &--variant-4{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .lookbook-detail__img{
+        flex: 1 0 calc(50% - 16px);
+        img{
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    }
+    &--variant-5{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'img2 img1 '
+                            ' img3 img1';
+      gap: 16px;
+      .img1{
+        grid-area: img1;
+        img{
+          width: 100%;
+        }
+      }
+      .img2{
+        grid-area: img2;
+        height: 100%;
+        img{
+          height: 100%;
+        }
+      }
+      .img3{
+        grid-area: img3;
+        height: 100%;
+        img{
+          height: 100%;
+        }
+      }
+    }
   }
   &__content{
     grid-area: content;

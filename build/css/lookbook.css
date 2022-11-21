@@ -1532,6 +1532,62 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
+.lookbook-detail__body--variant-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+}
+
+.lookbook-detail__body--variant-4 .lookbook-detail__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(50% - 16px);
+          flex: 1 0 calc(50% - 16px);
+}
+
+.lookbook-detail__body--variant-4 .lookbook-detail__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lookbook-detail__body--variant-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "img2 img1 " " img3 img1";
+  gap: 16px;
+}
+
+.lookbook-detail__body--variant-5 .img1 {
+  grid-area: img1;
+}
+
+.lookbook-detail__body--variant-5 .img1 img {
+  width: 100%;
+}
+
+.lookbook-detail__body--variant-5 .img2 {
+  grid-area: img2;
+  height: 100%;
+}
+
+.lookbook-detail__body--variant-5 .img2 img {
+  height: 100%;
+}
+
+.lookbook-detail__body--variant-5 .img3 {
+  grid-area: img3;
+  height: 100%;
+}
+
+.lookbook-detail__body--variant-5 .img3 img {
+  height: 100%;
+}
+
 .lookbook-detail__content {
   grid-area: content;
   text-align: center;
