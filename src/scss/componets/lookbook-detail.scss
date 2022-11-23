@@ -128,6 +128,7 @@
     grid-area: items;
     margin-top: 24px;
     flex: 1 0 100%;
+    max-width: 100%;
   }
   &__dropdown{
     position: absolute;
@@ -191,10 +192,12 @@
         }
       }
       &--variant-3{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 'img1' 'img2' 'img3' 'items';
+        display: flex;
+        flex-wrap: wrap;
         gap: 16px;
+        .lookbook-detail__img{
+          flex: 1 0 100%;
+        }
         .img1{
           grid-area: img1;
         }
@@ -203,6 +206,9 @@
         }
         .img3{
           grid-area: img3;
+        }
+        img{
+          width: 100%;
         }
       }
       &--variant-4{

@@ -1616,6 +1616,7 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
           flex: 1 0 100%;
+  max-width: 100%;
 }
 
 .lookbook-detail__dropdown {
@@ -1647,22 +1648,6 @@ button.swiper-pagination-bullet {
 
 .lookbook-items {
   font-family: "GT Eesti Pro";
-}
-
-.lookbook-items__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 16px;
-}
-
-.lookbook-items__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 calc(25% - 16px);
-          flex: 1 0 calc(25% - 16px);
-  max-width: 25%;
 }
 
 .lookbook-items__figure {
@@ -1722,6 +1707,23 @@ button.swiper-pagination-bullet {
   height: 10px;
   background-color: #89B3C1;
   overflow: hidden;
+}
+
+.lookbook-items .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px 16px;
+}
+
+.lookbook-items .swiper-slide {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(25% - 16px);
+          flex: 1 0 calc(25% - 16px);
+  max-width: 25%;
 }
 
 .lookbook-dropdown {
@@ -2192,10 +2194,18 @@ button.swiper-pagination-bullet {
   }
 
   .lookbook-detail__body--variant-3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "img1" "img2" "img3" "items";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 16px;
+  }
+
+  .lookbook-detail__body--variant-3 .lookbook-detail__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 
   .lookbook-detail__body--variant-3 .img1 {
@@ -2208,6 +2218,10 @@ button.swiper-pagination-bullet {
 
   .lookbook-detail__body--variant-3 .img3 {
     grid-area: img3;
+  }
+
+  .lookbook-detail__body--variant-3 img {
+    width: 100%;
   }
 
   .lookbook-detail__body--variant-4 {
@@ -2242,6 +2256,19 @@ button.swiper-pagination-bullet {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .lookbook-items .swiper-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .lookbook-items .swiper-slide {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    max-width: 100%;
   }
 
   .other-collection {
