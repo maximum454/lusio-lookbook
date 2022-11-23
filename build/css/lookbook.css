@@ -1217,6 +1217,17 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.lookbook_header {
+  margin: 0 0 10px;
+}
+
+.lookbook_header img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .lookbook_page {
   padding: 0 20px;
   max-width: 1380px;
@@ -1226,6 +1237,7 @@ button.swiper-pagination-bullet {
 
 .lookbook_page__header {
   text-align: center;
+  margin-top: 48px;
   margin-bottom: 60px;
 }
 
