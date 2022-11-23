@@ -46,6 +46,13 @@ window.addEventListener('load', function() {
     if($('.swiper-other-collection').length){
         swiperOtherMode();
     }
+
+    const lookbookDropdownBtn = document.querySelectorAll('.lookbook-dropdown__btn')
+    for( drop of lookbookDropdownBtn){
+        drop.addEventListener('click', function (){
+            console.log('click')
+        })
+    }
 });
 
 window.addEventListener('resize', function() {
@@ -53,3 +60,5 @@ window.addEventListener('resize', function() {
         swiperOtherMode();
     }
 });
+
+

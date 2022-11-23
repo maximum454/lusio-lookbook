@@ -1,4 +1,19 @@
 .lookbook-dropdown{
+  max-width: 320px;
+  &:hover{
+    .lookbook-dropdown__list{
+      display: block;
+      &.active{
+        display: block;
+      }
+    }
+    .lookbook-dropdown__btn{
+      span{
+        display: inline-block;
+        margin-left: 8px;
+      }
+    }
+  }
   &__btn{
     background-color: #ffffff;
     border: 0;
@@ -11,13 +26,17 @@
     color: #262626;
     padding: 8px 12px;
     cursor: pointer;
+    span{
+      display: none;
+    }
   }
   &__list{
     background-color: #FFFFFF;
     padding: 8px;
-    position: absolute;
-    bottom: 38px;
+    position: relative;
+    bottom: 2px;
     list-style: none;
+    display: none;
     &.active{
       display: block;
     }

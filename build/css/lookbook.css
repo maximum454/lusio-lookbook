@@ -1616,7 +1616,6 @@ button.swiper-pagination-bullet {
 .lookbook-detail .icon {
   display: inline-block;
   position: relative;
-  margin-right: 8px;
   width: 20px;
   height: 20px;
   vertical-align: middle;
@@ -1713,6 +1712,23 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.lookbook-dropdown {
+  max-width: 320px;
+}
+
+.lookbook-dropdown:hover .lookbook-dropdown__list {
+  display: block;
+}
+
+.lookbook-dropdown:hover .lookbook-dropdown__list.active {
+  display: block;
+}
+
+.lookbook-dropdown:hover .lookbook-dropdown__btn span {
+  display: inline-block;
+  margin-left: 8px;
+}
+
 .lookbook-dropdown__btn {
   background-color: #ffffff;
   border: 0;
@@ -1731,12 +1747,17 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
+.lookbook-dropdown__btn span {
+  display: none;
+}
+
 .lookbook-dropdown__list {
   background-color: #FFFFFF;
   padding: 8px;
-  position: absolute;
-  bottom: 38px;
+  position: relative;
+  bottom: 2px;
   list-style: none;
+  display: none;
 }
 
 .lookbook-dropdown__list.active {
@@ -1805,6 +1826,7 @@ button.swiper-pagination-bullet {
 .lookbook-product-item__cart {
   display: block;
   text-decoration: none;
+  padding-right: 10px;
 }
 
 .other-collection {
