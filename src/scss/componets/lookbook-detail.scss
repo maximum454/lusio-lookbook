@@ -119,6 +119,7 @@
     }
   }
   &__img{
+    position: relative;
     img{
       display: block;
       object-fit: cover;
@@ -129,7 +130,30 @@
     margin-top: 24px;
     flex: 1 0 100%;
   }
-
+  &__dropdown{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+  }
+  .icon{
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &.icon-cart{
+      background-image: url("../img/lookbook-product-item-cart.svg");
+    }
+    &.icon-favorites{
+      background-image: url("../img/lookbook-product-item-favorites.svg");
+      margin-right: 0;
+    }
+  }
   @include r(767){
     &__body{
       margin-bottom: 40px;
