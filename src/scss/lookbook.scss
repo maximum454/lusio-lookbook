@@ -1,7 +1,8 @@
 @import "mixin";
 @import "fonts";
-@import "buttons";
 @import "./partials/swiper-bundle";
+@import "./partials/remodal";
+@import "./partials/remodal-default-theme";
 
 
 .lookbook_header{
@@ -42,6 +43,86 @@
   height: auto;
 }
 
+.remodal-wrapper.remodal-lookbook{
+  overflow: hidden;
+}
+.remodal{
+  &.remodal-lookbook{
+    padding: 40px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    max-width: 510px;
+    height: 100%;
+    transition: right .3s ease;
+    display: block;
+    text-align: left;
+    font-family: $font1;
+    &.remodal-is-opened{
+      right: 0;
+    }
+    .remodal-close{
+      left: auto;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/remodal-close.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+
+.product-count{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #262626;
+  width: 92px;
+  height: 36px;
+  padding: 8px;
+  border: 1px solid #6F6F6F;
+  overflow: hidden;
+  &__minus,
+  &__plus{
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  &__minus{
+    background-image: url("../img/Minus.svg");
+  }
+  &__plus{
+    background-image: url("../img/Plus.svg");
+  }
+  input{
+    padding: 0;
+    margin: 0;
+    height: auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #262626;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
 
 @import "componets/lookbook-block";
 @import "componets/lookbook-detail";
@@ -49,6 +130,7 @@
 @import "componets/lookbook-dropdown";
 @import "componets/lookbook-product-item";
 @import "componets/other-collection";
+@import "componets/lookbook-modal";
 
 
 

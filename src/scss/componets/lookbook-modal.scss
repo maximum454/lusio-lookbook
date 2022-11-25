@@ -1,0 +1,151 @@
+.lookbook-modal{
+  &__title{
+    font-family: $font1;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    color: #262626;
+    margin: 0 0 24px;
+  }
+  &__body{
+    display: flex;
+    padding-bottom: 28px;
+    margin-bottom: 24px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 -40px;
+      background-color:#D1D1D3;
+      width: calc(100% + 80px);
+      height: 1px;
+    }
+  }
+  &__figure{
+    margin: 0 16px 0 0;
+    flex: 1 0 150px;
+    max-width: 150px;
+  }
+  &__content{
+    flex: 1 0;
+  }
+  &__articul{
+    font-family: $font1;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #A5A5A5;
+  }
+  &__name{
+    font-family: $font1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+    text-decoration: none;
+    margin: 0 0 16px;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price{
+    text-align: right;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #262626;
+  }
+  &__price-old{
+    text-decoration: line-through;
+    color: #A5A5A5;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__count{
+
+  }
+  &__footer{
+    text-align: center;
+  }
+  &__add{
+    background: #262626;
+    padding: 18px 30px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  &__cancel{
+    margin-top: 24px;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #262626;
+    cursor: pointer;
+  }
+}
+
+.lookbook-modal-sku{
+  margin-bottom: 16px;
+  &__tilte{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #262626;
+    margin: 0 0 10px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  &__item{
+    width: 46px;
+    height: 46px;
+    border: 1px solid #262626;
+    cursor: pointer;
+    color: #262626;
+    &.selected{
+      padding: 4px;
+    }
+    &.disabled{
+      pointer-events: none;
+      border:1px solid #D1D1D3;
+    }
+  }
+  &__color{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+  }
+  &__size{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+}
