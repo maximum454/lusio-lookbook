@@ -12,6 +12,15 @@
     position: absolute;
     top: 2px;
     right: 2px;
+    .active{
+      .icon{
+        &.icon-favorites{
+          background-image: url("/local/templates/lusio/images/heart-full.svg");
+          margin-right: 0;
+        }
+      }
+    }
+
   }
   &__content{
     max-width: 164px;

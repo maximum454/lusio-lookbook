@@ -127,6 +127,12 @@
     line-height: 20px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
+    width: 280px;
+    border: 1px solid #262626;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    padding: 16px 16px;
   }
 
   @include r(1023){

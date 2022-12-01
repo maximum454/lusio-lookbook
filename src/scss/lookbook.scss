@@ -4,6 +4,9 @@
 @import "./partials/remodal";
 @import "./partials/remodal-default-theme";
 
+.lb_style{
+
+}
 
 .lookbook_header{
   margin: 0 0 10px;
@@ -26,7 +29,7 @@
 }
 .lookbook_page__title{
   font-family: $font1;
-  text-align: center;
+  text-align: center!important;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
