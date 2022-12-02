@@ -49,30 +49,11 @@
     background-color: #89B3C1;
     overflow: hidden;
   }
-
-  .swiper-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px 16px;
-  }
-  .swiper-slide{
-    position: relative;
-    flex: 1 0 calc(25%  - 16px);
-    max-width:25%;
-  }
   @include r(767){
     &__name {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-    }
-    .swiper-wrapper{
-      flex-wrap: nowrap;
-      gap: 0;
-    }
-    .swiper-slide{
-      flex: none;
-      max-width: 100%;
     }
   }
 }

@@ -130,6 +130,9 @@
     margin-top: 24px;
     flex: 1 0 100%;
     max-width: 100%;
+    .swiper-slide{
+      max-width: 323px;
+    }
   }
   &__dropdown{
     position: absolute;
@@ -232,6 +235,12 @@
           grid-area: img3;
         }
       }
+    }
+    &__dropdown{
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      width: calc(100% - 16px);
     }
   }
 }

@@ -47,4 +47,10 @@
       }
     }
   }
+  @include r(767){
+    &__list{
+      overflow: auto;
+      max-height: 175px;
+    }
+  }
 }
